@@ -145,6 +145,10 @@ function roundComplete(input) {
     }${ANSI}. Rounds: ${YELLOW}${
       successfulAttempts.length + failedAttempts.length
     }${ANSI}`;
+  } else {
+    finalMessage += `Overall attempts: ${YELLOW}${
+      successfulSum + failedSum
+    }${ANSI}.`;
   }
 
   console.log(finalMessage);
