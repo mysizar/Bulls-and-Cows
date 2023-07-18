@@ -11,6 +11,14 @@ let attemptsNumber = 10;
 export function welcomeText() {
   console.clear();
   console.log(HEAD, 'Welcome to the game "Bulls and Cows"', CODE);
+  console.log(
+    `
+
+  ▒█▀▀█ █░░█ █░░ █░░ █▀▀ 　 █▀▀█ █▀▀▄ █▀▀▄ 　 ▒█▀▀█ █▀▀█ █░░░█ █▀▀ 
+  ▒█▀▀▄ █░░█ █░░ █░░ ▀▀█ 　 █▄▄█ █░░█ █░░█ 　 ▒█░░░ █░░█ █▄█▄█ ▀▀█ 
+  ▒█▄▄█ ░▀▀▀ ▀▀▀ ▀▀▀ ▀▀▀ 　 ▀░░▀ ▀░░▀ ▀▀▀░ 　 ▒█▄▄█ ▀▀▀▀ ░▀░▀░ ▀▀▀
+  `
+  );
   console.log(`${YELLOW}
 GAME RULES:${ANSI}
  ⊳ I come up with a secret number, and YOU tries to guess it.
@@ -65,7 +73,7 @@ export function checkInput(input) {
     return false;
   } else if (input === genNum || attemptsNumber === 1) {
     currentAttempt++;
-    attemptsNumber = 10;
+    attemptsNumber = 10; // reset attempts for next game
     return roundComplete(input);
   } else {
     if (mode === "diff") attemptsNumber--;

@@ -11,7 +11,7 @@ export const userName = prompt(cyan("What is your name?: "), "Player");
 yellow(`${userName}, do you want to play easy or difficult mode?`);
 export const mode = prompt(
   cyan(
-    "Type 'diff' to select difficult mode or press 'Enter' to play in easy mode): "
+    "Type 'diff' to select difficult mode or press 'Enter' to play in easy mode: "
   ),
   "easy"
 );
